@@ -11,6 +11,7 @@ server.use(express.static("build"));
 server.get("*", (request, response) => {
   response.sendFile(path.join(__dirname, "build", "index.html"));
 });
+
 socketServer.sockets.on("connection", socket => {
     socket.on("msg-from-client", msg => {
         socketServer.sockets.emit("msg-from-server", msg);
