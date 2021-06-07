@@ -1,0 +1,22 @@
+.chat .message {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    font-weight: 400;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    margin: 0;
+}
+.chat .messageDiv{
+    display: flex;
+    padding: 5px;
+}
+.chat .messages{
+    height: 400px;
+    background: #D8D5DB;
+    margin: 10px;
+    overflow: auto;
+  }
