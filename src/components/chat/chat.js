@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './chat.css';
 import io from 'socket.io-client';
 
-const socket = io.connect("wss://onlinechat-react.herokuapp.com");
+const socket = io.connect();
 
 export const Chat = (props) => {
     const [err, setErr] = useState(false);
