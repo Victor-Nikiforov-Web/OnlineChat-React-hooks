@@ -1,8 +1,9 @@
 const express = require('express');
 const io = require("socket.io");
 const server = express();
+const PORT = process.env.PORT || 3000;
 
-const expressListener = server.listen(process.env.PORT || 3000, () => console.log("Server is on"));
+const expressListener = server.listen(PORT, () => console.log("Server is on"));
 const socketServer = io(expressListener);
 
 server.use(express.static("build"));
