@@ -13,9 +13,7 @@ server.get("*", (request, response) => {
 });
 
 socketServer.sockets.on("connection", socket => {
-  console.log('socket');
     socket.on("msg-from-client", msg => {
         socketServer.sockets.emit("msg-from-server", msg);
-        console.log(msg);
     });
 });
